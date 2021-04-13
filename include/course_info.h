@@ -12,7 +12,6 @@ struct Course {
 };
 
 std::istream& operator>>(std::istream& in, Course& info);
-std::ostream& operator<<(std::ostream& out, const Course& info);
 
 struct CourseInfo {
     std::vector<Course> courses;

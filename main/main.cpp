@@ -3,13 +3,10 @@
 #include <iostream>
 
 void solve_problem(std::istream& in, std::ostream& out) {
-    CourseInfo info;
-    in >> info;
+    CourseInfo courses;
+    in >> courses;
 
-    CourseSelector selector(info);
-    auto courses = selector.Select();
-
-    for (auto& course : courses) {
+    for (const auto& course : CourseSelector().Select(courses)) {
         out << course << std::endl;
     }
 }
